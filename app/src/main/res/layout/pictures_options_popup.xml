@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView_pictures_options"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:textSize="17dp"
+        android:text="Select option"
+        android:clickable="false"
+        android:gravity="center"
+        android:textColor="#f3131313"
+        android:background="#d3d3d3"/>
+
+    <TextView
+        android:id="@+id/textView_pictures_options_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="Gallery"
+        android:textSize="17dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="#f3131313"/>
+
+
+    <ImageView
+        android:id="@+id/imageView_pictures_options_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#d3d3d3"
+        android:layout_marginTop="5dp"
+        app:srcCompat="?attr/dividerHorizontal" />
+
+    <TextView
+        android:id="@+id/textView_pictures_options_camera"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="Camera"
+        android:textSize="17dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="#f3131313"/>
+
+    <ImageView
+        android:id="@+id/imageView_pictures_options_camera"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#d3d3d3"
+        android:layout_marginTop="5dp"
+        app:srcCompat="?attr/dividerHorizontal" />
+
+    <TextView
+        android:id="@+id/textView_pictures_options_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textAlignment="center"
+        android:text="Cancel"
+        android:textSize="17dp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textColor="#f3131313"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

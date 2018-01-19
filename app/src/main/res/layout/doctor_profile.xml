@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/doctor_profile_ui">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/imageButton_doctor_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:id="@+id/textView_new_new_patient"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Your Profile"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="2dp"
+                android:gravity="center"
+                android:layout_weight="0.85"/>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_doctor_username"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="USER NAME"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/editText_doctor_username"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="User Name"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="7dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_doctor_name"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="FULL NAME"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_doctor_fullname"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Full Name"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_doctor_gender"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="GENDER"
+                    android:textSize="13dp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_doctor_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_doctor_male"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.2"
+                        android:checked="true"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/radio_doctor_female"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.25"
+                        android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/radio_doctor_other"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.2"
+                        android:text="Other" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_doctor_qualtification"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="QUALIFICATION"
+                    android:textSize="13dp" />
+
+                <Spinner
+                    android:id="@+id/editText_doctor_qualification"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:entries="@array/qualification_array"
+                    android:prompt="@string/qualification_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_doctor_college"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="COLLEGE"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_doctor_college"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="College"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_email"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="E-MAIL"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_doctor_email"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="E-mail Address"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_contact"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.9"
+                    android:padding="5dp"
+                    android:text="CONTACT"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_mobile"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="MOBILE"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_doctor_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/textView_doctor_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="10dp"
+        android:text="SAVE"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"/>
+
+</LinearLayout>

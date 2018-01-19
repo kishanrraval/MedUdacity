@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout_diagnosis_singleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/imageButton_diagnosis_singleview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/type_diagnosis"
+            android:clickable="false"
+            android:padding="5dp" />
+
+        <EditText
+            android:id="@+id/editText_diagnosis_singleview"
+            android:layout_width="70dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1.9"
+            android:hint="Type a Diagnosis"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textSize="18dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton_diagnosis_singleview_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/delete_diagnosis"
+            android:clickable="false"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

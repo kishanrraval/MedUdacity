@@ -24,18 +24,6 @@
         <item>Intern</item>
         <item>Doctor</item>
     </string-array>
-    <string name="title_activity_signup">Signup</string>
-    <string name="title_activity_new_patient_info">New_patient_info</string>
-    <string name="title_activity_view_patients">View_patients</string>
-    <string name="title_activity_delete_popup">Delete_popup</string>
-    <string name="title_activity_my_patients">My_patients</string>
-    <string name="title_activity_notes">Notes</string>
-    <string name="title_activity_pictures_options_popup">Pictures_options_popup</string>
-    <string name="title_activity_doctor_profile">Doctor_profile</string>
-    <string name="title_activity_printable">Printable</string>
-    <string name="title_activity_pdf_view">Pdf_view</string>
-    <string name="title_activity_view_image">View_image</string>
-    <string name="title_activity_login">Login</string>
 
 
 </resources>

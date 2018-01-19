@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/notes_ui">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <ImageButton
+                android:id="@+id/imageButton_notes_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/cancel" />
+
+            <TextView
+                android:id="@+id/textView_notes_new_note"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="New Note"
+                android:layout_weight="1"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="2dp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/imageButton_notes_save"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/checkmark"
+                android:layout_marginEnd="10dp"/>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/editText_notes_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Title"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:textSize="22dp"
+        android:layout_gravity="center"
+        android:singleLine="true"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_notes_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Date : "
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/editText_notes_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="date"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editText_notes_note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Whats on your mind?"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"/>
+
+            <ImageView
+                android:id="@+id/imageView_notes_description"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#d3d3d3"
+                android:layout_marginTop="30dp"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Prescription"
+                android:id="@+id/textView_prescription_prescription"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/textView_prescription_medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MEDICATION"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <EditText
+                android:id="@+id/editText_prescription_medication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:hint="Enter Medication's Name"
+                android:textColorHint="#8e8c8c"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/imageView_prescription_medication"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8e8c8c"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:id="@+id/textView_prescription_dispense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DISPENSE"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <EditText
+                android:id="@+id/editText_prescription_dispense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:hint="Enter Dispense"
+                android:textColorHint="#8e8c8c"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/imageView_prescription_dispense"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8e8c8c"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:id="@+id/textView_prescription_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="UNIT"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <EditText
+                android:id="@+id/editText_prescription_unit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:hint="Enter Medication's Unit"
+                android:textColorHint="#8e8c8c"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/imageView_prescription_unit"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8e8c8c"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:id="@+id/textView_prescription_refills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REFILLS"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <EditText
+                android:id="@+id/editText_prescription_refills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:hint="Enter The Refills"
+                android:textColorHint="#8e8c8c"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/imageView_prescription_refills"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8e8c8c"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="?android:attr/dividerHorizontal" />
+
+            <TextView
+                android:id="@+id/textView_prescription_sig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SIG"
+                android:textStyle="bold"
+                android:layout_marginTop="15dp"
+                android:textSize="15dp"
+                android:layout_marginStart="20dp"/>
+
+            <EditText
+                android:id="@+id/editText_prescription_sig"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:textSize="18dp"
+                android:hint="Enter The Instruction Like Dose, Route, etc"
+                android:textColorHint="#8e8c8c"
+                android:background="@android:color/transparent"
+                android:inputType="textPersonName" />
+
+            <View
+                android:id="@+id/imageView_prescription_sig"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#8e8c8c"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                app:srcCompat="?android:attr/dividerHorizontal" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

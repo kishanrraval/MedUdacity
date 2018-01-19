@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/view_patient_ui">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <ImageButton
+                    android:id="@+id/imageButton_view_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="0dp"
+                    android:background="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/textView_view_patient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:text=""
+                    android:textColor="#ffffff"
+                    android:textAlignment="center"
+                    android:clickable="false"
+                    android:textSize="20dp"
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:layout_weight="2"/>
+
+                <ImageButton
+                    android:id="@+id/imageButton_view_more"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="10dp"
+                    android:clickable="true"
+                    android:background="@drawable/more" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_view_patient_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_view_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text=""
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text=""
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:text="DOB : "
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_dob_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_view_reffered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Doctor : "
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_id_reffered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=" "
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_view_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Patient ID : "
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_id_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_view_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Department : "
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_id_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_view_diagnosis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="DIAGNOSIS"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/imageView_view_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="#000000"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+
+            <TextView
+                android:id="@+id/textView_view_diagnosis_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:singleLine="false"
+                android:text=""
+                android:textSize="18dp" />
+
+
+            <TextView
+                android:id="@+id/textView_view_contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="CONTACT"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/imageView_view_contact"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="#000000"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_view_mobile"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.6"
+                    android:text="MOBILE"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/textView_view_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="PHONE"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_view_mobile_value"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.6"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textView_view_phone_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2"
+                    android:text="" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView_view_medical_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="MEDICAL HISTORY"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/imageView_view_medical_history"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="#000000"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+
+            <TextView
+                android:id="@+id/textView_view_medical_history_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:singleLine="false"
+                android:text=""
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textView_view_notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="NOTES"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/imageView_view_notes"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="#000000"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+            <LinearLayout
+                android:id="@+id/listView_notes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                />
+
+
+
+            <TextView
+                android:id="@+id/textView_view_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="PHOTOS"
+                android:textColor="#000000"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/imageView_view_photos"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:background="#000000"
+                app:srcCompat="?attr/dividerHorizontal" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                style="@style/AVLoadingIndicatorView"
+                android:visibility="visible"
+                app:indicatorName="BallClipRotateMultipleIndicator"
+                android:layout_gravity="center"
+                app:indicatorColor= "@color/colorAccent"
+                />
+
+            <LinearLayout
+                android:id="@+id/listView_photos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/imageButton_view_notes"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/notes"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_view_images"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/camera"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp" />
+
+        </LinearLayout>
+
+</LinearLayout>

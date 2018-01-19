@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    android:id="@+id/new_patient_ui">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_new"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/textView_new_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:clickable="true"
+                android:text="Cancel"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textView_new_new_patient"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="New Patient"
+                android:textColor="#ffffff"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="2dp"
+                android:gravity="center"
+                android:layout_weight="0.85"/>
+
+            <TextView
+                android:id="@+id/textView_new_tp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginStart="0dp"
+                android:clickable="false"
+                android:layout_weight="0.1"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:id="@+id/scrollview_new"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_first"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="FIRST NAME"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_first"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="First Name"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_middle"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="MIDDLE NAME"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Middle Name"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_last"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="LAST NAME"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_last"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Last Name"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_id"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="PATIENT - ID"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/Textview_new_id"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:hint="Patient's ID"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_department"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="DEPARTMENT"
+                    android:textSize="13dp" />
+
+                <Spinner
+                    android:id="@+id/spinner_new_department"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:entries="@array/department_array"
+                    android:prompt="@string/department_prompt" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_new_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_other"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text=""
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_other"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Department"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_gender"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:text="GENDER"
+                    android:textSize="13dp" />
+
+                <RadioGroup
+                    android:id="@+id/radio_new_Gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radio_new_male"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.2"
+                        android:checked="true"
+                        android:text="Male" />
+
+                    <RadioButton
+                        android:id="@+id/radio_new_female"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.25"
+                        android:text="Female" />
+
+                    <RadioButton
+                        android:id="@+id/radio_new_other"
+                        android:layout_width="0dp"
+                        android:layout_height="45dp"
+                        android:layout_weight="0.2"
+                        android:text="Other" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_date_of_birth"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.4"
+                    android:padding="5dp"
+                    android:text="DATE OF BIRTH"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/textView_new_dob"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1.5"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:hint="Patient's  DOB"
+                    android:textSize="18dp" />
+
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageButton_new_calendar"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/calendar"/>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_age"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="AGE"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/editText_new_age"
+                    android:layout_width="0dp"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:hint="Age"
+                    android:layout_marginTop="5dp"
+                    android:singleLine="true"
+                    android:textSize="18dp"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_email"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="E-MAIL"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_email"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="E-mail Address"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_address"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="ADDRESS"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_address"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Address"
+                    android:inputType="textPostalAddress"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_contact"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.9"
+                    android:padding="5dp"
+                    android:text="CONTACT"
+                    android:textSize="17dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_mobile"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="MOBILE"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_mobile"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_phone"
+                    android:layout_width="70dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="0.3"
+                    android:padding="5dp"
+                    android:text="PHONE"
+                    android:textSize="13dp" />
+
+                <EditText
+                    android:id="@+id/editText_new_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1.5"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_diagnosis"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.9"
+                    android:padding="5dp"
+                    android:text="DIAGNOSIS"
+                    android:textSize="17dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout_new_type_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_new_multiple_diagnosis_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout_new_layout_diagnosis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <ImageButton
+                        android:id="@+id/imageButton_new_add_diagnosis"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/add_diadnosis"
+                        android:clickable="false"
+                        android:padding="5dp" />
+
+                    <TextView
+                        android:id="@+id/editText_new_add_diagnosis"
+                        android:layout_width="70dp"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="1.9"
+                        android:hint="Add Diagnosis"
+                        android:gravity="center_vertical"
+                        android:padding="5dp"
+                        android:singleLine="true"
+                        android:textSize="18dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d3d3d3"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/textView_new_medical_history"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1.9"
+                    android:padding="5dp"
+                    android:text="MEDICAL HISTORY"
+                    android:textSize="17dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/editText_new_add_medical_history"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1.3"
+                    android:hint="Enter Medical History"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <TextView
+        android:id="@+id/textView_new_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="10dp"
+        android:text="CREATE"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="#ffffff"/>
+
+
+
+
+
+</LinearLayout>
